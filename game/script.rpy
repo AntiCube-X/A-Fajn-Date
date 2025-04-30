@@ -7,8 +7,7 @@ default player_name = ""
 transform felix_zoom:
     zoom 0.75
 
-
-
+$ class = "nezname"
 
 
 
@@ -87,12 +86,16 @@ label choices1_a:
     menu:
         "I.A":
             "Vybral si I.A triedu."
+            $ class = "I.A"
         "I.B":
             "Vybral si I.B triedu."
+            $ class = "I.B"
         "I.C":
             "Vybral si I.C triedu."
+            $ class = "I.C"
         "I.D":
             "Vybral si I.D triedu."
+            $ class = "I.D"
 
     jump after_choice
 
@@ -101,12 +104,16 @@ label choices1_b:
     menu:
         "II.A":
             "Vybral si II.A triedu."
+            $ class = "II.A"
         "II.B":
             "Vybral si II.B triedu."
+            $ class = "II.B"
         "II.C":
             "Vybral si II.C triedu."
+            $ class = "II.C"
         "II.D":
             "Vybral si II.D triedu."
+            $ class = "II.D"
 
     jump after_choice
 
@@ -115,12 +122,16 @@ label choices1_c:
     menu:
         "III.A":
             "Vybral si III.A triedu."
+            $ class = "III.A"
         "III.B":
             "Vybral si III.B triedu."
+            $ class = "III.B"
         "III.C":
             "Vybral si III.C triedu."
+            $ class = "III.C"
         "III.D":
             "Vybral si III.D triedu."
+            $ class = "III.D"
 
     jump after_choice
 
@@ -129,17 +140,22 @@ label choices1_d:
     menu:
         "IV.A":
             "Vybral si IV.A triedu."
+            $ class = "IV.A"
         "IV.B":
             "Vybral si IV.B triedu."
+            $ class = "IV.B"
         "IV.C":
             "Vybral si IV.C triedu."
+            $ class = "IV.C"
         "IV.D":
             "Vybral si IV.D triedu."
+            $ class = "IV.D"
 
     jump after_choice
 
 label choices1_e:
-    felix "V.A, co?"
+    felix "V.D, co?"
+    $ class = "V.D"
 
     jump after_choice
 
