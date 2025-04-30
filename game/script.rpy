@@ -6,9 +6,9 @@ default default_name = "mlady muz"
 default player_name = ""
 transform felix_zoom:
     zoom 0.75
-define dolnik_position = Position(xpos=0.8)
+define dolnik_position = Position(xpos=0.5, ypos=0.7)
 transform dolnik_zoom:
-    zoom 1.5
+    zoom 1.3
 $ student_student_class = "nezname"
 
 transform slide_in_left:
