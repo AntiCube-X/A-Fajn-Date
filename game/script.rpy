@@ -253,4 +253,26 @@ label after_choice:
 
     show dolnik base at slide_in_left
 
-    dolnik "dobrý deň"
+    dolnik "Dobrý deň"
+    dolnik "Dnes tu máme nového žiaka z Fínska"
+    mc "ja som [player_name], Rád vás všetkých spoznávam."
+    dolnik "dobre, keď už máme toto z krku, musím vám rozdať tieto rozvrhy."
+    "Rozvrh bol pridaný do inventára!"
+    scene bg rozvrh
+    mc "nevyzerá zas až tak zle..."
+    scene bg trieda
+    show dolnik base at dolnik_zoom, dolnik_position
+    dolnik "dobre to je dnes teda všetko."
+    dolnik "Pakujte domov!"
+
+    scene internat
+    with fade
+    mc "Milý denníik."
+    mc "dnes som bol zapísaný do novej triedy."
+    mc "spolužiakov som ešte nemal čas spoznať, ale učitela máme parádneho."
+    mc "už sa neviem dočkať na zajtrajšok."
+    "[player_name] odloží denník a ide spať."
+
+
+
+    
