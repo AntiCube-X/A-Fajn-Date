@@ -173,3 +173,4 @@ label after_choice:
     mc "Ano, preco?"
 
     ucitel "Ja budem tvoja triedna ucitelka tento rok."
+    ucitel "joj"
