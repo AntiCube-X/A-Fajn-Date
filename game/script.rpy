@@ -6,7 +6,9 @@ default default_name = "mlady muz"
 default player_name = ""
 transform felix_zoom:
     zoom 0.75
-
+define dolnik_position = Position(xpos=0.8)
+transform dolnik_zoom
+    zoom 1.5
 $ student_student_class = "nezname"
 
 transform slide_in_left:
@@ -221,7 +223,7 @@ label after_choice:
 
     mc "Dobrý deň, tu sa prosím vás zapisuje?"
 
-    show dolnik base at felix_zoom, felix_position
+    show dolnik base at felix_zoom, dolnik_position
     dolnik "Počkaj, ty si [player_name]?"
 
 
