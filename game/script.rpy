@@ -254,6 +254,3 @@ label after_choice:
     show dolnik base at slide_in_left
 
     dolnik "dobrý deň"
-
-
-    

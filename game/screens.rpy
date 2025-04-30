@@ -339,6 +339,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    xalign 0.5
 
 
 ## Main Menu screen ############################################################
@@ -652,7 +653,7 @@ screen file_slots(title):
             vbox:
                 style_prefix "page"
 
-                xalign 0.5
+                xalign 0.
                 yalign 1.0
 
                 hbox:

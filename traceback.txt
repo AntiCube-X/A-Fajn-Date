@@ -1,0 +1,44 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
+  File "renpy/common/00start.rpy", line 202, in <module>
+    _init_language()
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language, force=True)
+SyntaxError: unexpected EOF while parsing (game/screens.rpy, line 391)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 202, in <module>
+    _init_language()
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language, force=True)
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\translation\__init__.py", line 791, in change_language
+    new_change_language(tl, language)
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\translation\__init__.py", line 746, in new_change_language
+    i.apply()
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2813, in apply
+    value = renpy.python.py_eval(expr)
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1216, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1153, in py_compile
+    raise e
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1090, in py_compile
+    raise orig_e
+  File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1082, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (game/screens.rpy, line 391)
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.7.25031702
+A Fajn Date 1.0
+Wed Apr 30 23:56:35 2025
