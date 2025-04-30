@@ -1,0 +1,78 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 10: invalid syntax
+    class = "nezname"
+           ^
+
+File "game/script.rpy", line 118: invalid syntax
+    class = "I.A"
+           ^
+
+File "game/script.rpy", line 121: invalid syntax
+    class = "I.B"
+           ^
+
+File "game/script.rpy", line 124: invalid syntax
+    class = "I.C"
+           ^
+
+File "game/script.rpy", line 127: invalid syntax
+    class = "I.D"
+           ^
+
+File "game/script.rpy", line 136: invalid syntax
+    class = "II.A"
+           ^
+
+File "game/script.rpy", line 139: invalid syntax
+    class = "II.B"
+           ^
+
+File "game/script.rpy", line 142: invalid syntax
+    class = "II.C"
+           ^
+
+File "game/script.rpy", line 145: invalid syntax
+    class = "II.D"
+           ^
+
+File "game/script.rpy", line 154: invalid syntax
+    class = "III.A"
+           ^
+
+File "game/script.rpy", line 157: invalid syntax
+    class = "III.B"
+           ^
+
+File "game/script.rpy", line 160: invalid syntax
+    class = "III.C"
+           ^
+
+File "game/script.rpy", line 163: invalid syntax
+    class = "III.D"
+           ^
+
+File "game/script.rpy", line 172: invalid syntax
+    class = "IV.A"
+           ^
+
+File "game/script.rpy", line 175: invalid syntax
+    class = "IV.B"
+           ^
+
+File "game/script.rpy", line 178: invalid syntax
+    class = "IV.C"
+           ^
+
+File "game/script.rpy", line 181: invalid syntax
+    class = "IV.D"
+           ^
+
+File "game/script.rpy", line 187: invalid syntax
+    class = "V.D"
+           ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Wed Apr 30 21:47:41 2025

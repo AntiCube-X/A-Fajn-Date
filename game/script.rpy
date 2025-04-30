@@ -233,5 +233,16 @@ label after_choice:
     with fade
 
     mc "[class]..."
+    
+    scene bg dvere
 
-    "niggs"
+    mc "aha."
+    mc "to bude asi tu"
+    "[player_name] otvorí dvere a vojde dnu."
+
+    scene bg trieda
+    with fade
+
+    "[player_name] odignoruje pohľady svojich nových spolužiakov a sadne si do voľnej lavice."
+
+    
