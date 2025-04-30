@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 235: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 250: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 252: expected statement.
-    >>>>>>> d2861bbf77a79c699e7e97a4add4bb50678d8fae
-                                                    ^
+File "game/script.rpy", line 10: expected ':' not found.
+    transform dolnik_zoom
+                         ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed Apr 30 22:12:01 2025
+Wed Apr 30 23:01:51 2025
