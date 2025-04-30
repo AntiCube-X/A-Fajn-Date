@@ -233,3 +233,5 @@ label after_choice:
     with fade
 
     mc "[class]..."
+
+    "niggers"
