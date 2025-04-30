@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 10: expected ':' not found.
-    transform dolnik_zoom
-                         ^
+File "game/script.rpy", line 255: expected 'simple_expression' not found.
+    show dolnik base at at dolnik_zoom, dolnik_position
+                        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-<<<<<<< HEAD
-Wed Apr 30 23:01:51 2025
-=======
-Wed Apr 30 22:55:54 2025
->>>>>>> 7f1a864e4dc568106ce22f37cefd4cc7a28881e6
+Thu May  1 00:17:51 2025
