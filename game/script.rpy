@@ -234,4 +234,4 @@ label after_choice:
 
     mc "[class]..."
 
-    "niggers"
+    "niggs"
