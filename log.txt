@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 2025-05-01 21:55:37 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.7.25031702
 
 Early init took 0.08s
+=======
+2025-05-01 20:43:28 UTC
+Windows-10-10.0.19045
+Ren'Py 8.3.7.25031702
+
+Early init took 0.11s
+>>>>>>> 61c456e6427e7a75dcffcf0de4017b6cc532d2f9
