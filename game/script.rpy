@@ -356,7 +356,7 @@ label after_choice:
     scene black screen
     show text "O 3 triednicke hodiny neskor..."
 
-    pause 1.0
+    pause 2.5
 
     scene bg trieda
     show dolnik base at dolnik_zoom, dolnik_position
