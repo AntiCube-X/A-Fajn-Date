@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/script.rpy", line 117:
-label start:
-and File "game/script.rpy", line 374:
-    label start:
-
+File "game/script.rpy", line 132: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            textbutton "Zatvorit" action Hide("custom_options)
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu May  1 22:44:45 2025
+Fri May  2 00:35:49 2025

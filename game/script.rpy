@@ -19,6 +19,14 @@ define energy = 3
 default dayofweek = "pondelok"
 default dayofweeknumber = 1
 
+init python:
+    def sanitize_player_name(name):
+        if not name or not isinstance(name, str) or name.strip() == "":
+            return default_name
+        else:
+            return name.strip().capitalize()
+
+
 screen DayDisplay:
     text "[dayofweek]" ypos 0.85 xpos 0.05
     text "ENERGY: [energy]" ypos 0.9 xpos 0.05
@@ -109,6 +117,37 @@ label daychange:
 return
 
 
+screen custom_options():
+
+    modal True  # blocks other input while open
+    frame:
+        xalign 0.5
+        yalign 0.5
+        has vbox spacing 15
+
+        text "Moznosti:" size 30
+
+        textbutton "Otvor Inventar" action ShowMenu("inventory_screen")
+        textbutton "Ulozit hru" action ShowMenu("save")
+        textbutton "Zatvorit" action Hide("custom_options")
+
+init python:
+    config.overlay_screens.append("floating_menu")
+
+default inventory = [
+]
+
+init python:
+    def show_item_info(item):
+        renpy.say(None, f"{item['name']}: {item['desc']}")
+
+screen floating_menu():
+    frame:
+        xalign 0.98
+        yalign 0.02
+        background "#0008"
+        padding (10, 5)
+        textbutton "☰" action Show("custom_options") text_size 22
 
 
 
@@ -121,14 +160,10 @@ label start:
 
     scene black screen
 
-
     "Ako sa voláš?"
     $ player_name = renpy.input("Ako sa voláš?")
-    $ player_name = player_name.strip()
-    $ player_name = player_name.capitalize()
 
-
-
+    $ player_name = sanitize_player_name(player_name)
 
     "Dobre, [player_name]."
 
@@ -137,9 +172,8 @@ label start:
 
     scene internat
 
-
     mc "Milý denník."
-    mc "Včera som doletel lietadlom na slovensko."
+    mc "Včera som doletel lietadlom na slovensko."  
     mc "V škole, u mňa doma vo fínsku, som mal veľmy dobrý prospech, tak ma pán učiteľ Mäkinen prihlásil na Erazmus."
     mc "Nakoniec sa rozhodlo že pôjdem na Slovensko."
     mc "Let prebehol v poriadku, a ubytovali ma na tento internát v Dúbravke."

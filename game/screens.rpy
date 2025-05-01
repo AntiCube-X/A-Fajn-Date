@@ -9,6 +9,28 @@ init offset = -1
 ## Styles
 ################################################################################
 
+
+
+screen inventory_screen():
+    tag menu
+    modal True
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        padding (20, 20)
+        background "#222"
+
+        vbox:
+            spacing 15
+            text "🧳 Inventár" size 40
+
+            for item in inventory:
+                textbutton item["name"] action [Function(show_item_info, item)] xalign 0.0
+
+            textbutton "Zatvoriť" action Return()
+
+
 style default:
     properties gui.text_properties()
     language gui.language
