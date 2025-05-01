@@ -15,6 +15,98 @@ transform slide_in_left:
     xalign -1.0
     linear 1.0 xalign 0.5  # Moves to center over 1 second
 
+define energy = 3
+default dayofweek = "pondelok"
+default dayofweeknumber = 1
+
+screen DayDisplay:
+    text "[dayofweek]" ypos 0.85 xpos 0.05
+    text "ENERGY: [energy]" ypos 0.9 xpos 0.05
+
+label morning:
+    $ energy -= 1
+    show city morning
+    menu:
+        "vyhon si":
+            "HELL YEAH"
+        "daj si ranajky":
+            "mnam mnam mnam"
+        "chod spat":
+            "chrrrr mimimimimi"
+    hide city
+return
+    
+label schoolday:
+    $ energy -= 1
+    hide city
+    show school day
+    menu:
+        "chod do skoly":
+            "Tak ok"
+        "daj si obed v skole":
+            "mnam mnam mnam"
+        "chod za skolu":
+            "muhahahaahhaah"
+    hide school
+return
+
+label day:
+    $ energy -= 1
+    show city day
+    menu:
+        "vyhon si znova":
+            "HELL YEAH"
+        "daj si obed":
+            "mnam mnam mnam"
+        "chod spat":
+            "chrrrr mimimimimi"
+    hide city
+return
+    
+label night:
+    $ energy -= 1
+    show city night
+    menu:
+        "chod srat":
+            "AAAAAHHHHH"
+        "daj si veceru":
+            "mnam mnam mnam"
+        "chod spat":
+            "chrrrr mimimimimi"
+    hide city
+return
+    
+
+label daychange:
+    $ dayofweeknumber += 1
+
+    if dayofweeknumber == 9:
+        $ dayofweeknumber = 1
+
+    elif dayofweeknumber == 1:
+        $ dayofweek = "pondelok"
+
+    elif dayofweeknumber == 2:
+        $ dayofweek = "utorok"
+
+    elif dayofweeknumber == 3:
+        $ dayofweek = "streda"
+
+    elif dayofweeknumber == 4:
+        $ dayofweek = "stvrtok"
+
+    elif dayofweeknumber == 5:
+        $ dayofweek = "piatok"
+
+    elif dayofweeknumber == 6:
+        $ dayofweek = "sobota"
+
+    elif dayofweeknumber == 7:
+        $ dayofweek = "nedela"
+
+    else:
+        $ dayofweek = "ERROR"
+return
 
 
 
@@ -278,6 +370,20 @@ label after_choice:
     "Zrazu zazvoní budík"
 
     scene internat
+    
+    while True:
+        show screen DayDisplay
+        if energy == 3:
+            call morning
+        elif energy == 2 and dayofweeknumber <= 5:
+            call schoolday
+        elif energy == 2:
+            call day
+        elif energy == 1:
+            call night
+        else:
+            $ energy = 3
+            call daychange
 
 
 
