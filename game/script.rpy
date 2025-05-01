@@ -352,6 +352,12 @@ label after_choice:
     "Rozvrh bol pridaný do inventára!"
     scene bg rozvrh
     mc "nevyzerá zas až tak zle..."
+    
+    scene black screen
+    show text "O 6 skolskych hodin neskor..."
+
+    pause 1.0
+
     scene bg trieda
     show dolnik base at dolnik_zoom, dolnik_position
     dolnik "dobre to je dnes teda všetko."
