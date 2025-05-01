@@ -354,7 +354,7 @@ label after_choice:
     mc "nevyzerá zas až tak zle..."
     
     scene black screen
-    show text "O 3 skolske hodiny neskor..."
+    show text "O 3 triednicke hodiny neskor..."
 
     pause 1.0
 
