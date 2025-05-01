@@ -1,4 +1,4 @@
-﻿define felix = Character("felix", color="#d751e4")
+﻿define Felix = Character("Felix", color="#d751e4")
 define felix_position = Position(xpos=0.5, ypos=0.99)
 define mc = Character("[player_name]" , color="#006eff")
 define dolnik = Character("dolnik")
@@ -143,8 +143,8 @@ label start:
     mc "V škole, u mňa doma vo fínsku, som mal veľmy dobrý prospech, tak ma pán učiteľ Mäkinen prihlásil na Erazmus."
     mc "Nakoniec sa rozhodlo že pôjdem na Slovensko."
     mc "Let prebehol v poriadku, a ubytovali ma na tento internát v Dúbravke."
-    mc "Bývam tu sám, lobo nešlo so mnou veľa žiakov."
-    mc "O hodinu mám byť na *Fajnorke*, škole ktorú mi priradili."
+    mc "Bývam tu sám, lebo nešlo so mnou veľa žiakov."
+    mc "O hodinu mám byť na Fajnorke, škole ktorú mi priradili."
     mc "Neviem sa dočkať"
     "[player_name] odloží svoj denník, a pripravý sa do školy."
 
@@ -183,17 +183,17 @@ label start:
     with fade
 
 
-    show felix base at felix_zoom, felix_position
+    show Felix base at felix_zoom, felix_position
 
 
-    felix "Ako sa voláte [default_name]?"
+    Felix "Ako sa voláte [default_name]?"
 
 
     mc "[player_name]."
 
 
-    felix "No dobre, [player_name]!"
-    felix "A do akého ročníka patríš, [player_name]?"
+    Felix "No dobre, [player_name]!"
+    Felix "A do akého ročníka patríš, [player_name]?"
 
 
     menu:
@@ -209,7 +209,7 @@ label start:
             jump choices1_e
 
 label choices1_a:
-    felix "A do akej triedy?"
+    Felix "A do akej triedy?"
     menu:
         "I.A":
             "Vybral si I.A triedu."
@@ -227,7 +227,7 @@ label choices1_a:
     jump after_choice
 
 label choices1_b:
-    felix "A do akej triedy?"
+    Felix "A do akej triedy?"
     menu:
         "II.A":
             "Vybral si II.A triedu."
@@ -245,7 +245,7 @@ label choices1_b:
     jump after_choice
 
 label choices1_c:
-    felix "A do akej triedy?"
+    Felix "A do akej triedy?"
     menu:
         "III.A":
             "Vybral si III.A triedu."
@@ -263,7 +263,7 @@ label choices1_c:
     jump after_choice
 
 label choices1_d:
-    felix "A do akej triedy?"
+    Felix "A do akej triedy?"
     menu:
         "IV.A":
             "Vybral si IV.A triedu."
@@ -281,13 +281,13 @@ label choices1_d:
     jump after_choice
 
 label choices1_e:
-    felix "V.D, co?"
+    Felix "V.D, co?"
     $ student_class = "V.D"
 
     jump after_choice
 
 label after_choice:
-    felix "Tak bez do auly uz tam na teba cakaju."
+    Felix "Tak bez do auly uz tam na teba cakaju."
 
 
     pause 1.0
@@ -297,13 +297,13 @@ label after_choice:
     with fade
 
 
-    show felix base at felix_zoom, felix_position
+    show Felix base at felix_zoom, felix_position
 
 
-    felix "Zravim vsetkych ludi s erazmu na fajnorke!"
-    felix "Dufam ze si uzijete pobyt na Slovensku a studium na Fajnorke."
-    felix "Po tom ako sa zapisete pri dverach do auly, sa postupne presunte do svojich tried a pockajte na vasho triedneho ucitela."
-    felix "A prajem vam vsetkym pekny den!"
+    Felix "Zravim vsetkych ludi s erazmu na fajnorke!"
+    Felix "Dufam ze si uzijete pobyt na Slovensku a studium na Fajnorke."
+    Felix "Po tom ako sa zapisete pri dverach do auly, sa postupne presunte do svojich tried a pockajte na vasho triedneho ucitela."
+    Felix "A prajem vam vsetkym pekny den!"
 
 
 
