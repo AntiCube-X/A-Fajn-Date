@@ -80,7 +80,7 @@ return
 label daychange:
     $ dayofweeknumber += 1
 
-    if dayofweeknumber == 9:
+    if dayofweeknumber == 8:
         $ dayofweeknumber = 1
 
     elif dayofweeknumber == 1:
