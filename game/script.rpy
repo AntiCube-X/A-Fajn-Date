@@ -390,7 +390,3 @@ label after_choice:
         else:
             $ energy = 3
             call daychange
-
-
-
-    
