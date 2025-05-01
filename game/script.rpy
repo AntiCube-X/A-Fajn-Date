@@ -273,6 +273,12 @@ label after_choice:
     mc "už sa neviem dočkať na zajtrajšok."
     "[player_name] odloží denník a ide spať."
 
+    scene black screen
+    with fade
+    "Zrazu zazvoní budík"
+
+    scene internat
+
 
 
     
