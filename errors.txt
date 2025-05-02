@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 132: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-            textbutton "Zatvorit" action Hide("custom_options)
+File "game/script.rpy", line 381: end of line expected.
+    show dolnik base at dolnik_position; dolnik_zoom
+                                       ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri May  2 00:35:49 2025
+Fri May  2 19:18:34 2025

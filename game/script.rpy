@@ -1,4 +1,4 @@
-﻿define Felix = Character("Felix", color="#d751e4")
+﻿define felix = Character("felix", color="#d751e4")
 define felix_position = Position(xpos=0.5, ypos=0.99)
 define mc = Character("[player_name]" , color="#006eff")
 define dolnik = Character("dolnik")
@@ -217,17 +217,17 @@ label start:
     with fade
 
 
-    show Felix base at felix_zoom, felix_position
+    show felix base at felix_zoom, felix_position
 
 
-    Felix "Ako sa voláte [default_name]?"
+    felix "Ako sa voláte [default_name]?"
 
 
     mc "[player_name]."
 
 
-    Felix "No dobre, [player_name]!"
-    Felix "A do akého ročníka patríš, [player_name]?"
+    felix "No dobre, [player_name]!"
+    felix "A do akého ročníka patríš, [player_name]?"
 
 
     menu:
@@ -243,7 +243,7 @@ label start:
             jump choices1_e
 
 label choices1_a:
-    Felix "A do akej triedy?"
+    felix "A do akej triedy?"
     menu:
         "I.A":
             "Vybral si I.A triedu."
@@ -261,7 +261,7 @@ label choices1_a:
     jump after_choice
 
 label choices1_b:
-    Felix "A do akej triedy?"
+    felix "A do akej triedy?"
     menu:
         "II.A":
             "Vybral si II.A triedu."
@@ -279,7 +279,7 @@ label choices1_b:
     jump after_choice
 
 label choices1_c:
-    Felix "A do akej triedy?"
+    felix "A do akej triedy?"
     menu:
         "III.A":
             "Vybral si III.A triedu."
@@ -297,7 +297,7 @@ label choices1_c:
     jump after_choice
 
 label choices1_d:
-    Felix "A do akej triedy?"
+    felix "A do akej triedy?"
     menu:
         "IV.A":
             "Vybral si IV.A triedu."
@@ -315,13 +315,13 @@ label choices1_d:
     jump after_choice
 
 label choices1_e:
-    Felix "V.D, co?"
+    felix "V.D, co?"
     $ student_class = "V.D"
 
     jump after_choice
 
 label after_choice:
-    Felix "Tak bez do auly uz tam na teba cakaju."
+    felix "Tak bez do auly uz tam na teba cakaju."
 
 
     pause 1.0
@@ -331,13 +331,13 @@ label after_choice:
     with fade
 
 
-    show Felix base at felix_zoom, felix_position
+    show felix base at felix_zoom, felix_position
 
 
-    Felix "Zravim vsetkych ludi s erazmu na fajnorke!"
-    Felix "Dufam ze si uzijete pobyt na Slovensku a studium na Fajnorke."
-    Felix "Po tom ako sa zapisete pri dverach do auly, sa postupne presunte do svojich tried a pockajte na vasho triedneho ucitela."
-    Felix "A prajem vam vsetkym pekny den!"
+    felix "Zravim vsetkych ludi s erazmu na fajnorke!"
+    felix "Dufam ze si uzijete pobyt na Slovensku a studium na Fajnorke."
+    felix "Po tom ako sa zapisete pri dverach do auly, sa postupne presunte do svojich tried a pockajte na vasho triedneho ucitela."
+    felix "A prajem vam vsetkym pekny den!"
 
 
 
@@ -386,6 +386,8 @@ label after_choice:
     "Rozvrh bol pridaný do inventára!"
     scene bg rozvrh
     mc "nevyzerá zas až tak zle..."
+
+    $ inventory.append({ "name": "Rozvrh", "desc": "Tvoj aktuálny školský rozvrh." })
     
     scene black screen
     show text "O 3 triednicke hodiny neskor..."

@@ -7,7 +7,7 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00action_other.rpy", line 619, in __call__
     rv = self.callable(*self.args, **self.kwargs)
-  File "game/script.rpy", line 143, in show_item_info
+  File "game/script.rpy", line 142, in show_item_info
     renpy.say(None, f"{item['name']}: {item['desc']}")
 Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
 
@@ -54,7 +54,7 @@ Full traceback:
     return action(*args, **kwargs)
   File "renpy/common/00action_other.rpy", line 619, in __call__
     rv = self.callable(*self.args, **self.kwargs)
-  File "game/script.rpy", line 143, in show_item_info
+  File "game/script.rpy", line 142, in show_item_info
     renpy.say(None, f"{item['name']}: {item['desc']}")
   File "C:\Users\kovac\Documents\Downloads\renpy-8.3.7-sdk\renpy\exports\sayexports.py", line 132, in say
     who(what, *args, **kwargs)
@@ -73,4 +73,4 @@ Exception: Cannot start an interaction in the middle of an interaction, without 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
 A Fajn Date 1.0
-Fri May  2 00:36:53 2025
+Fri May  2 19:13:10 2025
