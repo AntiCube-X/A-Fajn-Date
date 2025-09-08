@@ -1,4 +1,4 @@
-﻿define felix = Character("felix", color="#d751e4")
+﻿define felix = Character("Felix", color="#d751e4")
 define felix_position = Position(xpos=0.5, ypos=0.99)
 define mc = Character("[player_name]" , color="#006eff")
 define dolnik = Character("dolnik")
@@ -15,107 +15,12 @@ transform slide_in_left:
     xalign -1.0
     linear 1.0 xalign 0.5  # Moves to center over 1 second
 
-define energy = 3
-default dayofweek = "pondelok"
-default dayofweeknumber = 1
-
 init python:
     def sanitize_player_name(name):
         if not name or not isinstance(name, str) or name.strip() == "":
             return default_name
         else:
             return name.strip().capitalize()
-
-
-screen DayDisplay:
-    text "[dayofweek]" ypos 0.85 xpos 0.05
-    text "ENERGY: [energy]" ypos 0.9 xpos 0.05
-
-label morning:
-    $ energy -= 1
-    show city morning
-    menu:
-        "vyhon si":
-            "HELL YEAH"
-        "daj si ranajky":
-            "mnam mnam mnam"
-        "chod spat":
-            "chrrrr mimimimimi"
-    hide city
-return
-    
-label schoolday:
-    $ energy -= 1
-    hide city
-    show school day
-    menu:
-        "chod do skoly":
-            "Tak ok"
-        "daj si obed v skole":
-            "mnam mnam mnam"
-        "chod za skolu":
-            "muhahahaahhaah"
-    hide school
-return
-
-label day:
-    $ energy -= 1
-    show city day
-    menu:
-        "vyhon si znova":
-            "HELL YEAH"
-        "daj si obed":
-            "mnam mnam mnam"
-        "chod spat":
-            "chrrrr mimimimimi"
-    hide city
-return
-    
-label night:
-    $ energy -= 1
-    show city night
-    menu:
-        "chod srat":
-            "AAAAAHHHHH"
-        "daj si veceru":
-            "mnam mnam mnam"
-        "chod spat":
-            "chrrrr mimimimimi"
-    hide city
-return
-    
-
-label daychange:
-    $ dayofweeknumber += 1
-
-    if dayofweeknumber == 8:
-        $ dayofweeknumber = 1
-
-    elif dayofweeknumber == 1:
-        $ dayofweek = "pondelok"
-
-    elif dayofweeknumber == 2:
-        $ dayofweek = "utorok"
-
-    elif dayofweeknumber == 3:
-        $ dayofweek = "streda"
-
-    elif dayofweeknumber == 4:
-        $ dayofweek = "stvrtok"
-
-    elif dayofweeknumber == 5:
-        $ dayofweek = "piatok"
-
-    elif dayofweeknumber == 6:
-        $ dayofweek = "sobota"
-
-    elif dayofweeknumber == 7:
-        $ dayofweek = "nedela"
-
-    else:
-        $ dayofweek = "ERROR"
-return
-
 
 screen custom_options():
 
@@ -321,7 +226,7 @@ label choices1_e:
     jump after_choice
 
 label after_choice:
-    felix "Tak bez do auly uz tam na teba cakaju."
+    felix "Tak bež do auly už tam na teba čakaju."
 
 
     pause 1.0
@@ -334,10 +239,10 @@ label after_choice:
     show felix base at felix_zoom, felix_position
 
 
-    felix "Zravim vsetkych ludi s erazmu na fajnorke!"
-    felix "Dufam ze si uzijete pobyt na Slovensku a studium na Fajnorke."
-    felix "Po tom ako sa zapisete pri dverach do auly, sa postupne presunte do svojich tried a pockajte na vasho triedneho ucitela."
-    felix "A prajem vam vsetkym pekny den!"
+    felix "Zdravím všetkych ludi z erazmu na Fajnorke!"
+    felix "Dúfam že si užijete pobyt na Slovensku a štúdium na Fajnorke."
+    felix "Po tom ako sa zapíšete pri dverach do auly, sa postupne presunte do svojích tried a počkajte na vašeho triedneho učiteľa."
+    felix "A prajem vám všetkým pekný deň!"
 
 
 
@@ -412,17 +317,3 @@ label after_choice:
     "Zrazu zazvoní budík"
 
     scene internat
-    
-    while True:
-        show screen DayDisplay
-        if energy == 3:
-            call morning
-        elif energy == 2 and dayofweeknumber <= 5:
-            call schoolday
-        elif energy == 2:
-            call day
-        elif energy == 1:
-            call night
-        else:
-            $ energy = 3
-            call daychange
