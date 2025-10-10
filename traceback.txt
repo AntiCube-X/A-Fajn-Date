@@ -1,76 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-  File "renpy/common/00action_other.rpy", line 619, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/script.rpy", line 142, in show_item_info
-    renpy.say(None, f"{item['name']}: {item['desc']}")
-Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+  File "game/script.rpy", line 347, in script
+    if vysledok = 3:
+SyntaxError: invalid syntax (game/script.rpy, line 347)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\core.py", line 3289, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\screen.py", line 794, in event
-    rv = self.child.event(ev, x, y, st)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1526, in event
-    rv = super(Window, self).event(ev, x, y, st)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 285, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\behavior.py", line 1182, in event
-    return handle_click(self.clicked)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\behavior.py", line 1103, in handle_click
-    rv = run(action)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\behavior.py", line 394, in run
-    new_rv = run(i, *args, **kwargs)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\behavior.py", line 401, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 619, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/script.rpy", line 142, in show_item_info
-    renpy.say(None, f"{item['name']}: {item['desc']}")
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\character.py", line 1471, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\character.py", line 1117, in do_display
-    display_say(who,
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\character.py", line 814, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\gzmjo\OneDrive\Desktop\renpy-8.3.7-sdk\renpy\display\core.py", line 2187, in interact
-    raise Exception("Cannot start an interaction in the middle of an interaction, without creating a new context.")
-Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+  File "game/script.rpy", line 347, in script
+    if vysledok = 3:
+  File "C:\Users\gzmjo\OneDrive\Desktop\renpy crap\renpy-8.3.7-sdk\renpy\ast.py", line 1856, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\gzmjo\OneDrive\Desktop\renpy crap\renpy-8.3.7-sdk\renpy\python.py", line 1216, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\gzmjo\OneDrive\Desktop\renpy crap\renpy-8.3.7-sdk\renpy\python.py", line 1153, in py_compile
+    raise e
+  File "C:\Users\gzmjo\OneDrive\Desktop\renpy crap\renpy-8.3.7-sdk\renpy\python.py", line 1090, in py_compile
+    raise orig_e
+  File "C:\Users\gzmjo\OneDrive\Desktop\renpy crap\renpy-8.3.7-sdk\renpy\python.py", line 1082, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 347)
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 A Fajn Date 1.0
-Mon Sep  8 07:58:08 2025
+Wed Oct  8 09:16:06 2025

@@ -1,7 +1,8 @@
-﻿define felix = Character("Felix", color="#d751e4")
+define felix = Character("Felix", color="#d751e4")
 define felix_position = Position(xpos=0.5, ypos=0.99)
 define mc = Character("[player_name]" , color="#006eff")
-define dolnik = Character("dolnik")
+define dolnik = Character("Dolník")
+define suran = Character("Suran")
 default default_name = "mlady muz"
 default player_name = ""
 transform felix_zoom:
@@ -317,3 +318,41 @@ label after_choice:
     "Zrazu zazvoní budík"
 
     scene internat
+    with fade
+    mc "Ach, koľko je hodín?"
+    mc "7:23???"
+    mc "Musím ísť!"
+
+    scene bg trieda
+    mc "Prepáčte že idem neskoro ale-"
+    show suran placeholder at slide_in_left
+    suran "kde si tak dlho?"
+    suran "sadaj."
+    scene black screen
+    with fade
+    "[player_name] sa pomali stráca v matematika a nedáva pozor"
+    suran "[player_name]!"
+    suran "[player_name]!"
+    "[player_name] sa prebudí z bdenia ako obarený."
+    show suran placeholder
+    with fade
+    "čo, oddíchol si si?"
+    "no poď pred tabulu"
+
+    scene black screen
+
+    "vyrieš príklad"
+    $ vysledok = renpy.input("log3(5+4.log2(x-1)) = 2")
+
+if int(vysledok) == 3:
+    scene bg trieda
+    with fade
+    show suran placeholder
+    suran "výborne, jednotka"
+else:
+    scene bg trieda
+    with fade
+    show suran placeholder
+    suran "no, ale takto to nemá byť."
+    suran "päťka, sadaj."
+    

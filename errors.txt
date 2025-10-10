@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 381: end of line expected.
-    show dolnik base at dolnik_position; dolnik_zoom
-                                       ^
+File "game/script.rpy", line 345: reached end of line when expecting ':'.
+    if vysledok = 3
+                   ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri May  2 19:18:34 2025
+Wed Oct  8 09:04:02 2025
